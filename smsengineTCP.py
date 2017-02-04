@@ -56,7 +56,7 @@ def main( argv ):
 
     port       = int( argv[0] )
     words_file = argv[1]
-    ip_address = '127.0.0.1'
+    ip_address = socket.gethostbyname( socket.gethostname() )
 
     words_handle = open( words_file, 'r' )
     words        = words_handle.read()
