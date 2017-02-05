@@ -11,13 +11,13 @@ No need to compile.
 
 The commands to run the TCP and UDP server scripts are:
 
-`./smsengineTCP.py <port> <suspicious words file>`
-`./smsengineUDP.py <port> <suspicious words file>`
+* `./smsengineTCP.py <port> <suspicious words file>`
+* `./smsengineUDP.py <port> <suspicious words file>`
 
 The commands to run the TCP and UDP client scripts are:
 
-`./smsclientTCP.py <IP address of server> <port> <message file>`
-`./smsclientUDP.py <IP address of server> <port> <message file>`
+* `./smsclientTCP.py <IP address of server> <port> <message file>`
+* `./smsclientUDP.py <IP address of server> <port> <message file>`
 
 ## Known Bugs/Limitations
 

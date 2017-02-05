@@ -1,0 +1,29 @@
+> ./smsengineUDP.py 2017 suspicious.txt 
+(130.207.107.12) Listening on port 2017.
+^C
+Exiting...
+
+> ./smsengineTCP.py 2017 suspicious.txt 
+(130.207.107.12) Listening on port 2017.
+^C
+Exiting...
+
+> ./smsclientTCP.py 130.207.107.12 2017 long_message.txt 
+Response from server:
+0.0161290322581 62 viagra
+
+> ./smsclientUDP.py 130.207.107.12 2017 message.txt 
+The server has not answered in the last two seconds.
+retrying...
+The server has not answered in the last two seconds.
+retrying...
+Response from server:
+0.5 6 discount viagra proposal
+
+.> /smsclientTCP.py 130.207.107.12 2017 bad_message_0_chars.txt 
+Response from server:
+0 -1 ERROR
+
+> ./smsclientUDP.py 130.207.107.12 2017 bad_message_1001_chars.txt 
+Response from server:
+0 -1 ERROR
