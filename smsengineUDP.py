@@ -88,9 +88,6 @@ def main( argv ):
             ( score, total_count, suspicious_words ) = calculate_score( message )
 
             sock.sendto( 'S:' + str( score ),       ( client_address, client_port ) )
-
-            time.sleep( 5 )
-
             sock.sendto( 'T:' + str( total_count ), ( client_address, client_port ) )
 
             for suspicious_word in suspicious_words:

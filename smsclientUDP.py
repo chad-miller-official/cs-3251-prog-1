@@ -23,7 +23,6 @@ def receive_score_data( sock ):
 
             if score == 0:
                 score = 0
-
         elif data.startswith( 'T:' ):
             total_count = int( data[ 2: ] )
         else:
