@@ -42,7 +42,7 @@ def main( argv ):
     response                                 = recvall( sock )
     ( score, total_count, suspicious_words ) = pickle.loads( response )
 
-    print 'Response from server:\n{} {} {}'.format( score, total_count, ' '.join( suspicious_words ) )
+    print 'Response from server:\n{0} {1} {2}'.format( score, total_count, ' '.join( suspicious_words ) )
 
     sock.close()
 

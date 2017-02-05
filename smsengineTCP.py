@@ -6,7 +6,7 @@ import pickle
 import socket
 import sys
 
-BACKLOG_QUEUE_SIZE = 1
+BACKLOG_QUEUE_SIZE = 5
 BUFFER_SIZE        = 256
 BAD_INPUT_ERROR    = ( 0, -1, [ 'ERROR' ] )
 
@@ -66,7 +66,7 @@ def main( argv ):
     sock.bind( ( ip_address, port ) )
     sock.listen( BACKLOG_QUEUE_SIZE )
 
-    print 'Listening on port {}.'.format( port )
+    print '({0}) Listening on port {1}.'.format( ip_address, port )
 
     while True:
         try:
