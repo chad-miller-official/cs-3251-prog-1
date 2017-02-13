@@ -58,9 +58,14 @@ def calculate_score( message ):
     suspicious_words = []
     char_count       = len( message )
 
-    if( char_count <= 0 or char_count > 1000 ):
+    if char_count <= 0 or char_count > 1000:
         # If the message was empty or had more than 1000 characters, return
         # the bad input blob
+        return BAD_INPUT_ERROR
+
+    if not all( ord( char ) < 128 for char in message ):
+        # If the message contains non-ASCII characters, return the bad input
+        # blob
         return BAD_INPUT_ERROR
 
     total_count = 0
